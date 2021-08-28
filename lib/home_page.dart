@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scrollcontroller_listview/list_notifications.dart';
 import 'package:scrollcontroller_listview/move_elements_page.dart';
 import 'package:scrollcontroller_listview/offset_page.dart';
 
@@ -42,7 +43,13 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(height: 20),
             ElevatedButton(
               child: Text('Listen ScrollNotifications'),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ListenNotifications()),
+                );
+              },
             ),
           ],
         ),
