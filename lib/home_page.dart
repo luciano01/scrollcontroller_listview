@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scrollcontroller_listview/move_elements_page.dart';
 import 'package:scrollcontroller_listview/offset_page.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -31,7 +32,12 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(height: 20),
             ElevatedButton(
               child: Text('Move between elements'),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MoveElementsPage()),
+                );
+              },
             ),
             SizedBox(height: 20),
             ElevatedButton(
